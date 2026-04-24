@@ -19,6 +19,17 @@ Analyze any YouTube channel using `yt-dlp` (free, no API costs). Pulls real vide
 
 **Requires:** `yt-dlp` installed (`brew install yt-dlp`)
 
+### `/lyra`
+Transform any rough idea or weak prompt into a precision-crafted AI instruction — and save it to your Desktop as both a `.md` and `.docx` file automatically.
+
+**What it does:**
+- Diagnoses what's missing from your prompt (clarity, context, structure, constraints)
+- Applies the right technique based on request type (creative, technical, educational, image gen, system prompts)
+- Delivers a fully optimized prompt — no explanation, just the finished product
+- Auto-saves output to Desktop as `.md` + `.docx` via bundled Python script
+
+**Requires:** `python-docx` (`pip3 install python-docx`)
+
 ---
 
 ## How to Install Any Skill
