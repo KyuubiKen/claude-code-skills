@@ -30,6 +30,18 @@ Transform any rough idea or weak prompt into a precision-crafted AI instruction 
 
 **Requires:** `python-docx` (`pip3 install python-docx`)
 
+### `/convo-intel`
+Drop a folder of screenshots — Skool DMs, group chats, comment threads — and get back a full conversation intelligence report. Transcript, person profiles, and a specific next action for every person identified. No API key required.
+
+**What it does:**
+- OCRs all screenshots locally using Apple's built-in Vision framework (free, no internet needed)
+- Identifies every person in the conversation and builds a profile
+- Applies a 90% confidence floor — nothing below it appears in the output
+- Ends every report with a Next Move section: one specific action per person
+- Saves a `.md` report to your Desktop automatically
+
+**Requires:** macOS only — `pip3 install pyobjc-framework-Vision pyobjc-framework-Quartz`
+
 ---
 
 ## How to Install Any Skill
@@ -39,11 +51,13 @@ Transform any rough idea or weak prompt into a precision-crafted AI instruction 
 git clone https://github.com/KyuubiKen/claude-code-skills.git
 
 # Copy the skill you want into your Claude skills directory
-mkdir -p ~/.claude/skills/youtube-channel-audit
-cp claude-code-skills/youtube-channel-audit/SKILL.md ~/.claude/skills/youtube-channel-audit/SKILL.md
+# Example: convo-intel (includes a scripts folder)
+mkdir -p ~/.claude/skills/convo-intel/scripts
+cp claude-code-skills/convo-intel/SKILL.md ~/.claude/skills/convo-intel/SKILL.md
+cp claude-code-skills/convo-intel/scripts/ocr_extract.py ~/.claude/skills/convo-intel/scripts/ocr_extract.py
 ```
 
-Then inside Claude Code, type `/youtube-channel-audit` to invoke it.
+Then inside Claude Code, type `/convo-intel` to invoke it.
 
 ---
 
